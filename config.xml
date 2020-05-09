@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- config.xml reference: https://build.phonegap.com/docs/config-xml -->
+<widget xmlns     = "http://www.w3.org/ns/widgets"
+		xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:gap = "http://phonegap.com/ns/1.0"
+        id        = "com.phonegap.helloworld"
+        version   = "2.0.0">
+		
+		<config-file parent="/resources" target="./res/values/strings.xml">
+        <string name="menu_settings">1234</string>
+		</config-file>
+	
+
+    <name>Patrol for Pertamina</name>
+
+    <description>
+         Aplikasi Patrol Pertamina
+    </description>
+
+    <author href="#" email="riskyade.siak@gmail.com">
+        Risky Ade
+    </author>
+
+	<preference name="android-build-tool" value="gradle" />
+    <preference name="permissions"    value="true"/>
+	<preference name="android-minSdkVersion" value="19" />
+	<preference name="phonegap-version" value="cli-9.0.0" />
+	<preference name="GOOGLE_MAPS_ANDROID_API_KEY" value="AIzaSyDVmJGp9brbv1bV5UVwG1-XGWHO9Fo4xnk" />
+    <preference name="GOOGLE_MAPS_IOS_API_KEY" value="AIzaSyDVmJGp9brbv1bV5UVwG1-XGWHO9Fo4xnk" />
+	
+    <!-- Customize your app and platform with the preference element. -->
+    <preference name="orientation"                value="default" />        <!-- all: default means both landscape and portrait are enabled -->
+    <preference name="target-device"              value="universal" />      <!-- all: possible values handset, tablet, or universal -->
+    <preference name="fullscreen"                 value="false" />           <!-- all: hides the status bar at the top of the screen -->
+    <preference name="android-installLocation"    value="auto" />          
+	
+	
+<plugin name="phonegap-plugin-barcodescanner" />
+<plugin name="cordova-plugin-googlemaps" />
+<plugin name="cordova-plugin-battery-status" spec="2.0.3" />
+<plugin name="cordova-plugin-camera" spec="4.1.0" />
+<plugin name="cordova-plugin-whitelist" spec="1.3.4" />
+
+
+    <access origin="*"/>
+  
+    <platform name="android">
+        <allow-intent href="market:*" />
+    </platform>
+
+</widget>
